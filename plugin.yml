@@ -1,0 +1,41 @@
+name: Irradiated
+main: com.sordell.irradiated.Irradiated
+version: 0.7
+commands:
+  irradiated:
+    description: Display information about the plugin.
+    usage: /irradiated
+    permission: irradiated.user
+    permission-message: You need <permission> to run this command!
+  geiger:
+    description: Scan the area for background radiation.
+    usage: /geiger
+    permission: irradiated.geiger
+    permission-message: You need <permission> to run this command!
+  rads:
+    description: Display information about the plugin.
+    usage: /irradiated
+    permission: irradiated.user
+    permission-message: You need <permission> to run this command!
+permissions:
+  irradiated.*:
+    description: Gives access to all Irradiated commands
+    children:
+      irradiated.user: true
+      irradiated.geiger: true
+      irradiated.hazmat: false
+      irradiated.ghoul: false
+  irradiated.user:
+    description: Default user access
+    children:
+      irradiated.geiger: true
+    default: true
+  irradiated.geiger:
+    description: Allow use of the Geiger command & item
+    default: true
+  irradiated.hazmat:
+    description: Prevent radiation damage
+    default: false
+  irradiated.ghoul:
+    description: Radiation heals rather than damages
+    default: false

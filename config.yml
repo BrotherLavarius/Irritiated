@@ -1,0 +1,52 @@
+# Worlds the plugin will affect, comma seperated list.. eg world1,world2,etc
+IrradiatedWorlds: world
+
+# Item ID to use as a Geiger counter, defaults to Blaze Rod. Not needed for /geiger command
+GeigerID: 369
+
+# Item ID of food to heal 100 Rads, defaults to Golden Apple
+RadX: 322
+
+# How often (in server ticks) should the radiation be calculated? (20 ticks = 1 second)
+UpdateFrequency: 200
+
+# Damage over Time rate (0 to disable). 
+#  - Damage dealt is the players total rads divided by this value
+#  - Also determines the rate Ghouls heal at
+DoT: 250
+
+# When leaves are decayed from radiation, should they drop saplings?
+DropSaplings: false
+
+# Should players in rain take additional radiation damage?
+AcidRain: true
+
+# Should players in water take additional radiation damage?
+IrradiatedWater: true
+
+# Should potion effects be applied while players are suffering from radiation sickness?
+RadSickness: true
+
+# Should players be alerted when their rad count increases?
+AnnounceRads: true
+
+# Amount of radiation to remove from a player, for each other player within 16 blocks of their location (0 to disable)
+PlayerShelter: 0 
+
+# Blocks that cause radiation, format is 'BlockID:RadLevel', one per line
+RadiationBlocks:
+  - '73:4'
+  - '74:8'
+  - '76:1'
+  - '88:2'
+  - '89:4'
+  - '247:20'
+  - '233:20'
+  - '246:20'
+  - '3:0.01'
+
+# Blocks that absorb radiation
+ShelterBlocks:
+  - '49:5'
+  - '7:5'
+  
